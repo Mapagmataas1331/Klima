@@ -13,7 +13,7 @@
 			email,
 			password,
 			options: {
-				emailRedirectTo: 'https://etiquette-conf.ru/login',
+				emailRedirectTo: 'https://etiquette-conf.ru/login?confirmed=true',
 				data: { name }
 			}
 		});
@@ -21,7 +21,7 @@
 			error = signUpError.message;
 		} else {
 			message = 'Registration successful! Please check your email for confirmation.';
-			goto('/login');
+			goto('/login?confirmed=false');
 		}
 	}
 </script>
