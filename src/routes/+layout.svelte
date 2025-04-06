@@ -18,18 +18,18 @@
 	});
 </script>
 
-<nav class="bg-muted flex justify-between text-sm">
-	<div class="flex items-center justify-center p-2">
-		<a class="flex items-center gap-4" href="/">
+<nav class="bg-muted flex h-16 justify-between text-sm">
+	<div class="flex items-center justify-center pr-2 pl-4">
+		<a class="flex items-center gap-2" href="/">
 			<img
-				style="width: 40px; height: 40px;{$theme == 'dark' ? ' filter: invert(100%);' : ''}"
+				style="width: 32px; height: 32px;{$theme == 'dark' ? ' filter: invert(100%);' : ''}"
 				src="/klima.svg"
 				alt="icon"
 			/>
-			<p class="text-base font-semibold">{m.title()}</p>
+			<p class="pb-0.5 text-base font-semibold">{m.title()}</p>
 		</a>
 	</div>
-	<div class="flex gap-4 p-4">
+	<div class="flex items-center justify-center gap-2 pr-4 pl-2">
 		<div>
 			<label for="locale">{m.language()}: </label>
 			<select

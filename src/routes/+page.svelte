@@ -11,7 +11,7 @@
 	onDestroy(() => unsubscribe());
 </script>
 
-<main class="flex min-h-[calc(100dvh-61px)] flex-col items-center justify-center">
+<main class="flex min-h-[calc(100dvh-64px)] flex-col items-center justify-center">
 	<h1 class="mb-8 text-4xl font-bold">Conference 2025</h1>
 	<div class="space-x-4">
 		{#if currentSession}

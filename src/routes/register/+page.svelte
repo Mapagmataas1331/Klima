@@ -26,7 +26,7 @@
 	}
 </script>
 
-<main class="flex min-h-[calc(100dvh-61px)] flex-col items-center justify-center">
+<main class="flex min-h-[calc(100dvh-64px)] flex-col items-center justify-center">
 	<h1 class="mb-4 text-3xl font-bold">Register</h1>
 	<form
 		on:submit|preventDefault={register}

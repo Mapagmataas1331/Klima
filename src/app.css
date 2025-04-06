@@ -114,7 +114,7 @@
   }
 
   select {
-    @apply bg-muted text-fg border border-border rounded-md px-3 py-2 focus:outline-none shadow-sm cursor-pointer transition duration-150 ease-in-out hover:bg-bg;
+    @apply bg-muted text-fg border border-border rounded-md px-2.5 py-1.5 focus:outline-none shadow-sm cursor-pointer transition duration-150 ease-in-out hover:bg-bg;
   }
 
   .primary,
