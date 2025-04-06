@@ -1,12 +1,16 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import { setLocale, getLocale, locales, localizeHref, type Locale } from '$lib/paraglide/runtime';
+	import { setLocale, getLocale, locales, type Locale } from '$lib/paraglide/runtime';
 	import { theme } from '$lib/stores/theme';
 	import { m } from '$lib/paraglide/messages';
 
 	let { data, children } = $props();
 	let themes = { light: m.light(), dark: m.dark() };
+
+	$effect(() => {
+		document.title = m.title();
+	});
 
 	onMount(() => {
 		setLocale(data.locale as Locale);

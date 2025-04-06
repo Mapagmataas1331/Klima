@@ -10,7 +10,7 @@
 		if (loginError) {
 			error = loginError.message;
 		} else {
-			goto('/');
+			goto('/profile');
 		}
 	}
 </script>
