@@ -1,0 +1,8 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"title": "Конференция по этикету",
+	"language": "Язык",
+	"theme": "Тема",
+	"light": "Светлая",
+	"dark": "Темная"
+}
