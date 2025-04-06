@@ -24,7 +24,7 @@
 	<p class="text-primary">primary</p>
 </div>
 
-<div class="bg-bg flex min-h-screen items-center justify-center p-4">
+<div class="flex min-h-[calc(100dvh-61px)] flex-col items-center justify-center">
 	<div class="card mx-4 w-full max-w-2xl">
 		<div class="flex flex-col items-center space-y-8 p-6 text-center">
 			<!-- Dynamic error icon -->

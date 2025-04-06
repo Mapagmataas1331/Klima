@@ -18,7 +18,7 @@
 	let tickets = ['Ticket #001', 'Ticket #002'];
 </script>
 
-<main class="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+<main class="flex min-h-[calc(100dvh-61px)] flex-col items-center justify-center">
 	<h1 class="mb-4 text-3xl font-bold">Profile</h1>
 	{#if currentSession}
 		<p class="mb-4">Welcome, {currentSession.user.user_metadata.name}</p>
