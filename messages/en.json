@@ -4,5 +4,11 @@
 	"language": "Language",
 	"theme": "Theme",
 	"light": "Light",
-	"dark": "Dark"
+	"dark": "Dark",
+	"loading": "Loading...",
+	"notFound": "The requested resource could not be found",
+	"serverError": "Something went wrong on our end. Our team has been notified",
+	"error": "An unexpected error occurred",
+	"goHome": "Go Home"
+
 }
