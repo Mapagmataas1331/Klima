@@ -17,9 +17,9 @@
 		{#if currentSession}
 			<a href="/profile" class="primary"> Profile </a>
 		{:else}
-			<a href="/login" class="notify"> Login </a>
+			<a href="/login" class="primary"> Login </a>
 		{/if}
-		<a href="/buy-ticket" class="success"> Buy Ticket </a>
+		<a href="/buy-ticket" class="secondary"> Buy Ticket </a>
 	</div>
 </main>
 

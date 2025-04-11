@@ -3,109 +3,148 @@
 /* Светлая тема */
 :root,
 [data-theme='light'] {
-	--bg: #d9ecd4;
-	--fg: #3a3a3a;
+	--bg: #e6e6ff;
+	--fg: #000099;
+	--border: #b3b3ff;
+	--shadow: rgba(0, 0, 0, 0.16);
 
-	--muted: #a3c0a0;
-	--muted-fg: #000000;
+	--muted: #ccccff;
+	--muted-fg: #00001a;
+	--muted-border: #9999ff;
+	--muted-shadow: rgba(0, 0, 0, 0.08);
 
-	--border: #cfd8dc;
-	--shadow: rgba(0, 0, 0, 0.05);
+	--primary: #ffb3ff;
+	--primary-hover: #ff99ff;
+	--primary-border: #ff80ff;
+	--primary-fg: #800080;
+	--primary-fg-hover: #660066;
 
-	--primary: #6c8ebf;
-	--primary-1: #5a7daa;
-	--primary-2: #91a8c9;
+	--secondary: #ccccff;
+	--secondary-hover: #b3b3ff;
+	--secondary-border: #9999ff;
+	--secondary-fg: #000099;
+	--secondary-fg-hover: #000080;
 
-	--secondary: #d46e7e;
-	--secondary-1: #c25a69;
-	--secondary-2: #e0999d;
+	--notify: #b3d9ff;
+	--notify-hover: #99ccff;
+	--notify-border: #80bfff;
+	--notify-fg: #004080;
+	--notify-fg-hover: #003366;
 
-	--notify: #fbe8a6;
-	--notify-1: #f8d77b;
-	--notify-2: #fceec0;
+	--success: #b3ffb3;
+	--success-hover: #99ff99;
+	--success-border: #1aff1a;
+	--success-fg: #006600;
+	--success-fg-hover: #004d00;
 
-	--success: #7fbfa0;
-	--success-1: #6fae8f;
-	--success-2: #a1d2b4;
+	--warning: #ffff99;
+	--warning-hover: #ffff80;
+	--warning-border: #cccc00;
+	--warning-fg: #666600;
+	--warning-fg-hover: #4d4d00;
 
-	--warning: #f2b880;
-	--warning-1: #e8a468;
-	--warning-2: #f8ceaa;
-
-	--error: #e57373;
-	--error-1: #d05a5a;
-	--error-2: #f0a4a4;
+	--error: #ffb3b3;
+	--error-hover: #ff9999;
+	--error-border: #ff8080;
+	--error-fg: #800000;
+	--error-fg-hover: #660000;
 }
 
 /* Тёмная тема */
 [data-theme='dark'] {
-	--bg: #031911;
-	--fg: #f8fdac;
+	--bg: #00004d;
+	--fg: #e6e6ff;
+	--border: #00004d;
+	--shadow: rgba(0, 0, 0, 0.04);
 
-	--muted: #000;
-	--muted-fg: #fff;
+	--muted: #000033;
+	--muted-fg: #ccccff;
+	--muted-border: #000066;
+	--muted-shadow: rgba(0, 0, 0, 0.08);
 
-	--border: #58641d;
-	--shadow: rgba(0, 0, 0, 0.5);
+	--primary: #660066;
+	--primary-hover: #800080;
+	--primary-border: #ff80ff;
+	--primary-fg: #ff99ff;
+	--primary-fg-hover: #ffb3ff;
 
-	--primary: #a398c7;
-	--primary-1: #8f85b8;
-	--primary-2: #b6aee1;
+	--secondary: #000080;
+	--secondary-hover: #000099;
+	--secondary-border: #9999ff;
+	--secondary-fg: #b3b3ff;
+	--secondary-fg-hover: #ccccff;
 
-	--secondary: #80929f;
-	--secondary-1: #6e7c8d;
-	--secondary-2: #9ba7b7;
+	--notify: #003366;
+	--notify-hover: #004080;
+	--notify-border: #80bfff;
+	--notify-fg: #99ccff;
+	--notify-fg-hover: #b3d9ff;
 
-	--notify: #90a4ae;
-	--notify-1: #8297a7;
-	--notify-2: #b0bdc8;
+	--success: #004d00;
+	--success-hover: #006600;
+	--success-border: #1aff1a;
+	--success-fg: #99ff99;
+	--success-fg-hover: #b3ffb3;
 
-	--success: #7fbfa0;
-	--success-1: #6fae8f;
-	--success-2: #a1d2b4;
+	--warning: #4d4d00;
+	--warning-hover: #666600;
+	--warning-border: #cccc00;
+	--warning-fg: #ffff80;
+	--warning-fg-hover: #ffff99;
 
-	--warning: #f2b880;
-	--warning-1: #e8a468;
-	--warning-2: #f8ceaa;
-
-	--error: #e57373;
-	--error-1: #d05a5a;
-	--error-2: #f0a4a4;
+	--error: #660000;
+	--error-hover: #800000;
+	--error-border: #ff8080;
+	--error-fg: #ff9999;
+	--error-fg-hover: #ffb3b3;
 }
 
 @theme inline {
 	--color-bg: var(--bg);
 	--color-fg: var(--fg);
-
-	--color-muted: var(--muted);
-	--color-muted-fg: var(--muted-fg);
-
 	--color-border: var(--border);
 	--color-shadow: var(--shadow);
 
+	--color-muted: var(--muted);
+	--color-muted-fg: var(--muted-fg);
+	--color-muted-border: var(--muted-border);
+	--color-muted-shadow: var(--muted-shadow);
+
 	--color-primary: var(--primary);
-	--color-primary-1: var(--primary-1);
-	--color-primary-2: var(--primary-2);
+	--color-primary-hover: var(--primary-hover);
+	--color-primary-fg: var(--primary-fg);
+	--color-primary-fg-hover: var(--primary-fg-hover);
+	--color-primary-border: var(--primary-border);
 
 	--color-secondary: var(--secondary);
-	--color-secondary-1: var(--secondary-1);
-	--color-secondary-2: var(--secondary-2);
+	--color-secondary-hover: var(--secondary-hover);
+	--color-secondary-fg: var(--secondary-fg);
+	--color-secondary-fg-hover: var(--secondary-fg-hover);
+	--color-secondary-border: var(--secondary-border);
 
 	--color-notify: var(--notify);
-	--color-notify-1: var(--notify-1);
-	--color-notify-2: var(--notify-2);
+	--color-notify-hover: var(--notify-hover);
+	--color-notify-fg: var(--notify-fg);
+	--color-notify-fg-hover: var(--notify-fg-hover);
+	--color-notify-border: var(--notify-border);
 
 	--color-success: var(--success);
-	--color-success-1: var(--success-1);
-	--color-success-2: var(--success-2);
+	--color-success-hover: var(--success-hover);
+	--color-success-fg: var(--success-fg);
+	--color-success-fg-hover: var(--success-fg-hover);
+	--color-success-border: var(--success-border);
 
 	--color-warning: var(--warning);
-	--color-warning-1: var(--warning-1);
-	--color-warning-2: var(--warning-2);
+	--color-warning-hover: var(--warning-hover);
+	--color-warning-fg: var(--warning-fg);
+	--color-warning-fg-hover: var(--warning-fg-hover);
+	--color-warning-border: var(--warning-border);
 
 	--color-error: var(--error);
-	--color-error-1: var(--error-1);
-	--color-error-2: var(--error-2);
+	--color-error-hover: var(--error-hover);
+	--color-error-fg: var(--error-fg);
+	--color-error-fg-hover: var(--error-fg-hover);
+	--color-error-border: var(--error-border);
 }
 
 @layer base {
@@ -114,7 +153,7 @@
 	}
 
 	select {
-		@apply bg-muted text-muted-fg border-fg hover:bg-bg cursor-pointer rounded-md border px-2.5 py-1.5 shadow-sm transition duration-150 ease-in-out focus:outline-none;
+		@apply bg-muted cursor-pointer rounded-md border border-none p-0 focus:outline-none;
 	}
 
 	.primary,
@@ -123,31 +162,31 @@
 	.success,
 	.warning,
 	.error {
-		@apply inline-flex cursor-pointer items-center justify-center rounded-lg border-2 px-4 py-2 font-medium text-white shadow-sm transition-all duration-200 ease-in-out hover:shadow;
+		@apply inline-flex cursor-pointer items-center justify-center rounded-lg border-2 px-4 py-2 font-medium shadow-sm transition-all duration-200 ease-in-out hover:scale-105 hover:shadow;
 	}
 
 	.primary {
-		@apply bg-primary border-primary-2 hover:bg-primary-1;
+		@apply bg-primary border-primary-border hover:bg-primary-hover text-primary-fg;
 	}
 
 	.secondary {
-		@apply bg-secondary border-secondary-2 hover:bg-secondary-1;
+		@apply bg-secondary border-secondary-border hover:bg-secondary-hover text-secondary-fg;
 	}
 
 	.notify {
-		@apply bg-notify border-notify-2 hover:bg-notify-1;
+		@apply bg-notify border-notify-border hover:bg-notify-hover text-notify-fg;
 	}
 
 	.success {
-		@apply bg-success border-success-2 hover:bg-success-1;
+		@apply bg-success border-success-border hover:bg-success-hover text-success-fg;
 	}
 
 	.warning {
-		@apply bg-warning border-warning-2 hover:bg-warning-1;
+		@apply bg-warning border-warning-border hover:bg-warning-hover text-warning-fg;
 	}
 
 	.error {
-		@apply bg-error border-error-2 hover:bg-error-1;
+		@apply bg-error border-error-border hover:bg-error-hover text-error-fg;
 	}
 
 	.card {
@@ -156,7 +195,7 @@
 	}
 
 	.link {
-		@apply text-primary hover:text-primary-1 cursor-pointer font-medium underline-offset-2 transition-colors duration-200 ease-in-out hover:underline;
+		@apply text-primary hover:text-primary-hover cursor-pointer font-medium underline-offset-2 transition-colors duration-200 ease-in-out hover:underline;
 	}
 
 	.focus-ring {

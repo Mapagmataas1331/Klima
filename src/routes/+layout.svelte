@@ -4,6 +4,7 @@
 	import { setLocale, getLocale, locales, type Locale } from '$lib/paraglide/runtime';
 	import { theme } from '$lib/stores/theme';
 	import { m } from '$lib/paraglide/messages';
+	import Icon from '$lib/components/icon.svelte';
 
 	let { data, children } = $props();
 	let themes = { light: m.light(), dark: m.dark() };
@@ -18,19 +19,17 @@
 	});
 </script>
 
-<nav class="bg-muted text-muted-fg flex h-16 justify-between text-sm">
+<nav class="bg-muted text-muted-fg flex h-16 justify-between text-xs sm:text-sm">
 	<div class="flex items-center justify-center pr-2 pl-4">
-		<a class="flex items-center gap-2" href="/">
-			<img
-				style="width: 32px; height: 32px;{$theme == 'dark' ? ' filter: invert(100%);' : ''}"
-				src="/klima.svg"
-				alt="icon"
-			/>
-			<p class="pb-0.5 text-base font-semibold">{m.title()}</p>
+		<a class="hover:text-fg flex items-center gap-2 transition duration-150 ease-in-out" href="/">
+			<Icon class="size-7 fill-current sm:size-8" />
+			<p class="pb-0.5 text-sm font-semibold sm:text-base">{m.title()}</p>
 		</a>
 	</div>
-	<div class="flex items-center justify-center gap-2 pr-4 pl-2">
-		<div>
+	<div class="flex items-center justify-center gap-4 pr-4 pl-2">
+		<div
+			class="hover:text-fg p-i flex flex-col items-center justify-center gap-0 transition duration-150 ease-in-out sm:flex-row sm:gap-1.5"
+		>
 			<label for="locale">{m.language()}: </label>
 			<select
 				id="locale"
@@ -42,7 +41,9 @@
 				{/each}
 			</select>
 		</div>
-		<div>
+		<div
+			class="hover:text-fg flex flex-col items-center justify-center gap-0 transition duration-150 ease-in-out sm:flex-row sm:gap-1.5"
+		>
 			<label for="theme">{m.theme()}: </label>
 			<select
 				id="theme"
