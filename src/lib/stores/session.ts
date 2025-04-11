@@ -1,6 +1,8 @@
 import { readable } from 'svelte/store';
 import { supabase } from '$lib/supabaseClient';
-import type { Session } from '@supabase/supabase-js';
+import type { Session as SessionType } from '@supabase/supabase-js';
+
+export type Session = SessionType;
 
 export const session = readable<Session | null>(null, (set) => {
 	// Get the initial session

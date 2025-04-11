@@ -18,7 +18,7 @@
 	});
 </script>
 
-<nav class="bg-muted flex h-16 justify-between text-sm">
+<nav class="bg-muted text-muted-fg flex h-16 justify-between text-sm">
 	<div class="flex items-center justify-center pr-2 pl-4">
 		<a class="flex items-center gap-2" href="/">
 			<img
@@ -37,7 +37,7 @@
 				value={getLocale()}
 				onchange={(e) => setLocale((e.target as HTMLSelectElement).value as Locale)}
 			>
-				{#each locales as locale}
+				{#each locales as locale (locale)}
 					<option value={locale}>{locale}</option>
 				{/each}
 			</select>
@@ -49,7 +49,7 @@
 				value={$theme}
 				onchange={(e) => theme.set((e.target as HTMLSelectElement).value)}
 			>
-				{#each Object.entries(themes) as [value, label]}
+				{#each Object.entries(themes) as [value, label] ([value, label])}
 					<option {value}>{label}</option>
 				{/each}
 			</select>

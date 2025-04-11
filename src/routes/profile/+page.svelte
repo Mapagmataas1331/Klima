@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { supabase } from '$lib/supabaseClient';
-	import { session } from '$lib/stores/session';
+	import { session, type Session } from '$lib/stores/session';
 	import { onDestroy } from 'svelte';
-	let currentSession: any = null;
+	let currentSession: Session | null = null;
 
 	const unsubscribe = session.subscribe((value) => {
 		currentSession = value;
@@ -31,7 +31,7 @@
 		</button>
 		<h2 class="mb-2 text-2xl font-semibold">Bought Tickets</h2>
 		<ul class="list-disc pl-5">
-			{#each tickets as ticket}
+			{#each tickets as ticket (ticket)}
 				<li>{ticket}</li>
 			{/each}
 		</ul>

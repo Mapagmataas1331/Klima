@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { session } from '$lib/stores/session';
+	import { session, type Session } from '$lib/stores/session';
 	import { onDestroy } from 'svelte';
-	import { goto } from '$app/navigation';
-	let currentSession: any = null;
+
+	let currentSession: Session | null = null;
 
 	const unsubscribe = session.subscribe((value) => {
 		currentSession = value;

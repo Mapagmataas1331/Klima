@@ -3,163 +3,163 @@
 /* Светлая тема */
 :root,
 [data-theme='light'] {
-  --bg: #F5F7FA;
-  --fg: #3A3A3A;
+	--bg: #d9ecd4;
+	--fg: #3a3a3a;
 
-  --muted: #ECEFF1;
-  --muted-fg: #6D7881;
+	--muted: #a3c0a0;
+	--muted-fg: #000000;
 
-  --border: #CFD8DC;
-  --shadow: rgba(0, 0, 0, 0.05);
+	--border: #cfd8dc;
+	--shadow: rgba(0, 0, 0, 0.05);
 
-  --primary: #6C8EBF;
-  --primary-1: #5A7DAA;
-  --primary-2: #91A8C9;
+	--primary: #6c8ebf;
+	--primary-1: #5a7daa;
+	--primary-2: #91a8c9;
 
-  --secondary: #D46E7E;
-  --secondary-1: #C25A69;
-  --secondary-2: #E0999D;
+	--secondary: #d46e7e;
+	--secondary-1: #c25a69;
+	--secondary-2: #e0999d;
 
-  --notify: #FBE8A6;
-  --notify-1: #F8D77B;
-  --notify-2: #FCEEC0;
+	--notify: #fbe8a6;
+	--notify-1: #f8d77b;
+	--notify-2: #fceec0;
 
-  --success: #7FBFA0;
-  --success-1: #6FAE8F;
-  --success-2: #A1D2B4;
+	--success: #7fbfa0;
+	--success-1: #6fae8f;
+	--success-2: #a1d2b4;
 
-  --warning: #F2B880;
-  --warning-1: #E8A468;
-  --warning-2: #F8CEAA;
+	--warning: #f2b880;
+	--warning-1: #e8a468;
+	--warning-2: #f8ceaa;
 
-  --error: #E57373;
-  --error-1: #D05A5A;
-  --error-2: #F0A4A4;
+	--error: #e57373;
+	--error-1: #d05a5a;
+	--error-2: #f0a4a4;
 }
 
 /* Тёмная тема */
 [data-theme='dark'] {
-  --bg: #121212;
-  --fg: #E0E0E0;
+	--bg: #031911;
+	--fg: #f8fdac;
 
-  --muted: #1E1E1E;
-  --muted-fg: #B0B0B0;
+	--muted: #000;
+	--muted-fg: #fff;
 
-  --border: #2A2A2A;
-  --shadow: rgba(0, 0, 0, 0.5);
+	--border: #58641d;
+	--shadow: rgba(0, 0, 0, 0.5);
 
-  --primary: #A398C7;
-  --primary-1: #8F85B8;
-  --primary-2: #B6AEE1;
+	--primary: #a398c7;
+	--primary-1: #8f85b8;
+	--primary-2: #b6aee1;
 
-  --secondary: #80929F;
-  --secondary-1: #6E7C8D;
-  --secondary-2: #9BA7B7;
+	--secondary: #80929f;
+	--secondary-1: #6e7c8d;
+	--secondary-2: #9ba7b7;
 
-  --notify: #90A4AE;
-  --notify-1: #8297A7;
-  --notify-2: #B0BDC8;
+	--notify: #90a4ae;
+	--notify-1: #8297a7;
+	--notify-2: #b0bdc8;
 
-  --success: #7FBFA0;
-  --success-1: #6FAE8F;
-  --success-2: #A1D2B4;
+	--success: #7fbfa0;
+	--success-1: #6fae8f;
+	--success-2: #a1d2b4;
 
-  --warning: #F2B880;
-  --warning-1: #E8A468;
-  --warning-2: #F8CEAA;
+	--warning: #f2b880;
+	--warning-1: #e8a468;
+	--warning-2: #f8ceaa;
 
-  --error: #E57373;
-  --error-1: #D05A5A;
-  --error-2: #F0A4A4;
+	--error: #e57373;
+	--error-1: #d05a5a;
+	--error-2: #f0a4a4;
 }
 
 @theme inline {
-  --color-bg: var(--bg);
-  --color-fg: var(--fg);
+	--color-bg: var(--bg);
+	--color-fg: var(--fg);
 
-  --color-muted: var(--muted);
-  --color-muted-fg: var(--muted-fg);
+	--color-muted: var(--muted);
+	--color-muted-fg: var(--muted-fg);
 
-  --color-border: var(--border);
-  --color-shadow: var(--shadow);
+	--color-border: var(--border);
+	--color-shadow: var(--shadow);
 
-  --color-primary: var(--primary);
-  --color-primary-1: var(--primary-1);
-  --color-primary-2: var(--primary-2);
+	--color-primary: var(--primary);
+	--color-primary-1: var(--primary-1);
+	--color-primary-2: var(--primary-2);
 
-  --color-secondary: var(--secondary);
-  --color-secondary-1: var(--secondary-1);
-  --color-secondary-2: var(--secondary-2);
+	--color-secondary: var(--secondary);
+	--color-secondary-1: var(--secondary-1);
+	--color-secondary-2: var(--secondary-2);
 
-  --color-notify: var(--notify);
-  --color-notify-1: var(--notify-1);
-  --color-notify-2: var(--notify-2);
+	--color-notify: var(--notify);
+	--color-notify-1: var(--notify-1);
+	--color-notify-2: var(--notify-2);
 
-  --color-success: var(--success);
-  --color-success-1: var(--success-1);
-  --color-success-2: var(--success-2);
+	--color-success: var(--success);
+	--color-success-1: var(--success-1);
+	--color-success-2: var(--success-2);
 
-  --color-warning: var(--warning);
-  --color-warning-1: var(--warning-1);
-  --color-warning-2: var(--warning-2);
+	--color-warning: var(--warning);
+	--color-warning-1: var(--warning-1);
+	--color-warning-2: var(--warning-2);
 
-  --color-error: var(--error);
-  --color-error-1: var(--error-1);
-  --color-error-2: var(--error-2);
+	--color-error: var(--error);
+	--color-error-1: var(--error-1);
+	--color-error-2: var(--error-2);
 }
 
 @layer base {
-  body {
-    @apply bg-bg text-fg antialiased;
-  }
+	body {
+		@apply bg-bg text-fg antialiased;
+	}
 
-  select {
-    @apply bg-muted text-fg border border-border rounded-md px-2.5 py-1.5 focus:outline-none shadow-sm cursor-pointer transition duration-150 ease-in-out hover:bg-bg;
-  }
+	select {
+		@apply bg-muted text-muted-fg border-fg hover:bg-bg cursor-pointer rounded-md border px-2.5 py-1.5 shadow-sm transition duration-150 ease-in-out focus:outline-none;
+	}
 
-  .primary,
-  .secondary,
-  .notify,
-  .success,
-  .warning,
-  .error {
-    @apply cursor-pointer border-2 text-white inline-flex items-center justify-center font-medium rounded-lg px-4 py-2 shadow-sm transition-all duration-200 ease-in-out hover:shadow;
-  }
+	.primary,
+	.secondary,
+	.notify,
+	.success,
+	.warning,
+	.error {
+		@apply inline-flex cursor-pointer items-center justify-center rounded-lg border-2 px-4 py-2 font-medium text-white shadow-sm transition-all duration-200 ease-in-out hover:shadow;
+	}
 
-  .primary {
-    @apply bg-primary border-primary-2 hover:bg-primary-1;
-  }
+	.primary {
+		@apply bg-primary border-primary-2 hover:bg-primary-1;
+	}
 
-  .secondary {
-    @apply bg-secondary border-secondary-2 hover:bg-secondary-1;
-  }
+	.secondary {
+		@apply bg-secondary border-secondary-2 hover:bg-secondary-1;
+	}
 
-  .notify {
-    @apply bg-notify border-notify-2 hover:bg-notify-1;
-  }
+	.notify {
+		@apply bg-notify border-notify-2 hover:bg-notify-1;
+	}
 
-  .success {
-    @apply bg-success border-success-2 hover:bg-success-1;
-  }
+	.success {
+		@apply bg-success border-success-2 hover:bg-success-1;
+	}
 
-  .warning {
-    @apply bg-warning border-warning-2 hover:bg-warning-1;
-  }
+	.warning {
+		@apply bg-warning border-warning-2 hover:bg-warning-1;
+	}
 
-  .error {
-    @apply bg-error border-error-2 hover:bg-error-1;
-  }
+	.error {
+		@apply bg-error border-error-2 hover:bg-error-1;
+	}
 
-  .card {
-    @apply rounded-2xl p-6 shadow-md border bg-muted border-border transition-shadow duration-300;
-    box-shadow: 0 4px 14px var(--shadow);
-  }
+	.card {
+		@apply bg-muted border-border rounded-2xl border p-6 shadow-md transition-shadow duration-300;
+		box-shadow: 0 4px 14px var(--shadow);
+	}
 
-  .link {
-    @apply cursor-pointer text-primary font-medium transition-colors duration-200 ease-in-out hover:text-primary-1 underline-offset-2 hover:underline;
-  }
+	.link {
+		@apply text-primary hover:text-primary-1 cursor-pointer font-medium underline-offset-2 transition-colors duration-200 ease-in-out hover:underline;
+	}
 
-  .focus-ring {
-    box-shadow: 0 0 0 3px rgba(198, 166, 100, 0.3);
-  }
+	.focus-ring {
+		box-shadow: 0 0 0 3px rgba(198, 166, 100, 0.3);
+	}
 }
