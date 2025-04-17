@@ -23,7 +23,7 @@
 	<div class="flex items-center justify-center pr-2 pl-4">
 		<a class="hover:text-fg flex items-center gap-2 transition duration-150 ease-in-out" href="/">
 			<Icon class="size-7 fill-current sm:size-8" />
-			<p class="max-w-24 pb-0.5 text-sm font-semibold sm:max-w-none sm:text-base">{m.title()}</p>
+			<p class="max-w-28 pb-0.5 text-sm font-semibold sm:max-w-none sm:text-base">{m.title()}</p>
 		</a>
 	</div>
 	<div class="flex items-center justify-center gap-4 pr-4 pl-2">
