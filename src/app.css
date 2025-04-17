@@ -2,51 +2,51 @@
 
 :root,
 [data-theme='light'] {
-	--bg: #F7F5F2;
-	--fg: #1E1E2F;
-	--border: #E1E1E3;
+	--bg: #f7f5f2;
+	--fg: #1e1e2f;
+	--border: #e1e1e3;
 	--shadow: rgba(0, 0, 0, 0.12);
 
-	--muted: #EDEBE8;
+	--muted: #edebe8;
 	--muted-fg: #666579;
-	--muted-border: #D6D3D0;
+	--muted-border: #d6d3d0;
 	--muted-shadow: rgba(0, 0, 0, 0.06);
 
-	--primary: #A08DAA;
-	--primary-hover: #B49FBA;
-	--primary-border: #C2B4CC;
-	--primary-fg: #F4F1F7;
-	--primary-fg-hover: #FFFFFF;
+	--primary: #a08daa;
+	--primary-hover: #b49fba;
+	--primary-border: #c2b4cc;
+	--primary-fg: #f4f1f7;
+	--primary-fg-hover: #ffffff;
 
-	--secondary: #8FA8C8;
-	--secondary-hover: #9DB8D9;
-	--secondary-border: #B0C8EA;
-	--secondary-fg: #F0F4FA;
-	--secondary-fg-hover: #FFFFFF;
+	--secondary: #8fa8c8;
+	--secondary-hover: #9db8d9;
+	--secondary-border: #b0c8ea;
+	--secondary-fg: #f0f4fa;
+	--secondary-fg-hover: #ffffff;
 
-	--notify: #C9D6E3;
-	--notify-hover: #D6E3EF;
-	--notify-border: #E3F0FB;
-	--notify-fg: #1A2A37;
-	--notify-fg-hover: #0F1A24;
+	--notify: #c9d6e3;
+	--notify-hover: #d6e3ef;
+	--notify-border: #e3f0fb;
+	--notify-fg: #1a2a37;
+	--notify-fg-hover: #0f1a24;
 
-	--success: #C8E6C9;
-	--success-hover: #DBF0DB;
-	--success-border: #EDF9ED;
+	--success: #c8e6c9;
+	--success-hover: #dbf0db;
+	--success-border: #edf9ed;
 	--success-fg: #204020;
 	--success-fg-hover: #112010;
 
-	--warning: #FAE5B4;
-	--warning-hover: #FBEABD;
-	--warning-border: #FDF3E2;
-	--warning-fg: #5C4A1A;
-	--warning-fg-hover: #2E240E;
+	--warning: #fae5b4;
+	--warning-hover: #fbeabd;
+	--warning-border: #fdf3e2;
+	--warning-fg: #5c4a1a;
+	--warning-fg-hover: #2e240e;
 
-	--error: #F3C6C6;
-	--error-hover: #F7D2D2;
-	--error-border: #FBECEC;
-	--error-fg: #5A1E1E;
-	--error-fg-hover: #2D0F0F;
+	--error: #f3c6c6;
+	--error-hover: #f7d2d2;
+	--error-border: #fbecec;
+	--error-fg: #5a1e1e;
+	--error-fg-hover: #2d0f0f;
 }
 
 [data-theme='dark'] {
@@ -167,7 +167,7 @@
 	}
 
 	.link {
-		@apply text-secondary underline decoration-secondary decoration-2 hover:text-secondary-hover hover:decoration-secondary-hover visited:text-primary visited:decoration-primary visited:hover:text-primary-hover focus:outline-none focus:ring-2 focus:ring-secondary-border transition-colors duration-200 ease-in-out;
+		@apply text-secondary decoration-secondary hover:text-secondary-hover hover:decoration-secondary-hover visited:text-primary visited:decoration-primary visited:hover:text-primary-hover focus:ring-secondary-border underline decoration-2 transition-colors duration-200 ease-in-out focus:ring-2 focus:outline-none;
 	}
 
 	.primary,
