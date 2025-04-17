@@ -1,102 +1,100 @@
 @import 'tailwindcss';
 
-/* Светлая тема */
 :root,
 [data-theme='light'] {
-	--bg: #e6e6ff;
-	--fg: #000099;
-	--border: #b3b3ff;
-	--shadow: rgba(0, 0, 0, 0.16);
+	--bg: #F7F5F2;
+	--fg: #1E1E2F;
+	--border: #E1E1E3;
+	--shadow: rgba(0, 0, 0, 0.12);
 
-	--muted: #ccccff;
-	--muted-fg: #00001a;
-	--muted-border: #9999ff;
-	--muted-shadow: rgba(0, 0, 0, 0.08);
+	--muted: #EDEBE8;
+	--muted-fg: #666579;
+	--muted-border: #D6D3D0;
+	--muted-shadow: rgba(0, 0, 0, 0.06);
 
-	--primary: #ffb3ff;
-	--primary-hover: #ff99ff;
-	--primary-border: #ff80ff;
-	--primary-fg: #800080;
-	--primary-fg-hover: #660066;
+	--primary: #A08DAA;
+	--primary-hover: #B49FBA;
+	--primary-border: #C2B4CC;
+	--primary-fg: #F4F1F7;
+	--primary-fg-hover: #FFFFFF;
 
-	--secondary: #ccccff;
-	--secondary-hover: #b3b3ff;
-	--secondary-border: #9999ff;
-	--secondary-fg: #000099;
-	--secondary-fg-hover: #000080;
+	--secondary: #8FA8C8;
+	--secondary-hover: #9DB8D9;
+	--secondary-border: #B0C8EA;
+	--secondary-fg: #F0F4FA;
+	--secondary-fg-hover: #FFFFFF;
 
-	--notify: #b3d9ff;
-	--notify-hover: #99ccff;
-	--notify-border: #80bfff;
-	--notify-fg: #004080;
-	--notify-fg-hover: #003366;
+	--notify: #C9D6E3;
+	--notify-hover: #D6E3EF;
+	--notify-border: #E3F0FB;
+	--notify-fg: #1A2A37;
+	--notify-fg-hover: #0F1A24;
 
-	--success: #b3ffb3;
-	--success-hover: #99ff99;
-	--success-border: #1aff1a;
-	--success-fg: #006600;
-	--success-fg-hover: #004d00;
+	--success: #C8E6C9;
+	--success-hover: #DBF0DB;
+	--success-border: #EDF9ED;
+	--success-fg: #204020;
+	--success-fg-hover: #112010;
 
-	--warning: #ffff99;
-	--warning-hover: #ffff80;
-	--warning-border: #cccc00;
-	--warning-fg: #666600;
-	--warning-fg-hover: #4d4d00;
+	--warning: #FAE5B4;
+	--warning-hover: #FBEABD;
+	--warning-border: #FDF3E2;
+	--warning-fg: #5C4A1A;
+	--warning-fg-hover: #2E240E;
 
-	--error: #ffb3b3;
-	--error-hover: #ff9999;
-	--error-border: #ff8080;
-	--error-fg: #800000;
-	--error-fg-hover: #660000;
+	--error: #F3C6C6;
+	--error-hover: #F7D2D2;
+	--error-border: #FBECEC;
+	--error-fg: #5A1E1E;
+	--error-fg-hover: #2D0F0F;
 }
 
-/* Тёмная тема */
 [data-theme='dark'] {
-	--bg: #00004d;
-	--fg: #e6e6ff;
-	--border: #00004d;
-	--shadow: rgba(0, 0, 0, 0.04);
+	--bg: #1a1a2e;
+	--fg: #e0def4;
+	--border: #2e2e44;
+	--shadow: rgba(0, 0, 0, 0.06);
 
-	--muted: #000033;
-	--muted-fg: #ccccff;
-	--muted-border: #000066;
+	--muted: #2b2b3b;
+	--muted-fg: #b8aed3;
+	--muted-border: #3c3c57;
 	--muted-shadow: rgba(0, 0, 0, 0.08);
 
-	--primary: #660066;
-	--primary-hover: #800080;
-	--primary-border: #ff80ff;
-	--primary-fg: #ff99ff;
-	--primary-fg-hover: #ffb3ff;
+	--primary: #5e4b8b;
+	--primary-hover: #6f5c9a;
+	--primary-border: #7d6cae;
+	--primary-fg: #dcd6f7;
+	--primary-fg-hover: #e8e3fc;
 
-	--secondary: #000080;
-	--secondary-hover: #000099;
-	--secondary-border: #9999ff;
-	--secondary-fg: #b3b3ff;
-	--secondary-fg-hover: #ccccff;
+	--secondary: #3a4a6d;
+	--secondary-hover: #515f8c;
+	--secondary-border: #6a82b0;
+	--secondary-fg: #cfd6e9;
+	--secondary-fg-hover: #e1e8f5;
 
-	--notify: #003366;
-	--notify-hover: #004080;
-	--notify-border: #80bfff;
-	--notify-fg: #99ccff;
-	--notify-fg-hover: #b3d9ff;
+	--notify: #3f5d72;
+	--notify-hover: #547684;
+	--notify-border: #739baa;
+	--notify-fg: #c4d8e2;
+	--notify-fg-hover: #d5e8f0;
 
-	--success: #004d00;
-	--success-hover: #006600;
-	--success-border: #1aff1a;
-	--success-fg: #99ff99;
-	--success-fg-hover: #b3ffb3;
+	--success: #2e4f2e;
+	--success-hover: #3b6b3b;
+	--success-border: #5a8f5a;
+	--success-fg: #c8e6c9;
+	--success-fg-hover: #e0f2e9;
 
-	--warning: #4d4d00;
-	--warning-hover: #666600;
-	--warning-border: #cccc00;
-	--warning-fg: #ffff80;
-	--warning-fg-hover: #ffff99;
+	--warning: #66602b;
+	--warning-hover: #7d7740;
+	--warning-border: #9f9a49;
+	--warning-fg: #e9e5b5;
+	--warning-fg-hover: #f2f0c5;
 
-	--error: #660000;
-	--error-hover: #800000;
-	--error-border: #ff8080;
-	--error-fg: #ff9999;
-	--error-fg-hover: #ffb3b3;
+	--error: #6e2e2e;
+	--error-hover: #883a3a;
+	--error-border: #ad5555;
+	--error-fg: #f2cfcf;
+	--error-fg-hover: #f7dede;
 }
 
 @theme inline {
@@ -148,12 +146,28 @@
 }
 
 @layer base {
+	html {
+		font-size: 16px;
+		line-height: 1.6;
+		letter-spacing: 0.5px;
+		-webkit-font-smoothing: antialiased;
+		hyphens: auto;
+	}
+
 	body {
 		@apply bg-bg text-fg antialiased;
 	}
 
+	p {
+		hyphens: auto;
+	}
+
 	select {
-		@apply bg-muted cursor-pointer rounded-md border border-none p-0 focus:outline-none;
+		@apply bg-muted cursor-pointer rounded-md border-none p-0 focus:outline-none;
+	}
+
+	.link {
+		@apply text-secondary underline decoration-secondary decoration-2 hover:text-secondary-hover hover:decoration-secondary-hover visited:text-primary visited:decoration-primary visited:hover:text-primary-hover focus:outline-none focus:ring-2 focus:ring-secondary-border transition-colors duration-200 ease-in-out;
 	}
 
 	.primary,
@@ -187,18 +201,5 @@
 
 	.error {
 		@apply bg-error border-error-border hover:bg-error-hover text-error-fg;
-	}
-
-	.card {
-		@apply bg-muted border-border rounded-2xl border p-6 shadow-md transition-shadow duration-300;
-		box-shadow: 0 4px 14px var(--shadow);
-	}
-
-	.link {
-		@apply text-primary hover:text-primary-hover cursor-pointer font-medium underline-offset-2 transition-colors duration-200 ease-in-out hover:underline;
-	}
-
-	.focus-ring {
-		box-shadow: 0 0 0 3px rgba(198, 166, 100, 0.3);
 	}
 }
