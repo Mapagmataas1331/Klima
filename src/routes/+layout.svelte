@@ -16,6 +16,16 @@
 		'dark-blue': 'Dark Blue'
 	};
 
+	let showScrollTop = $state(false);
+
+	function handleScroll() {
+		showScrollTop = window.pageYOffset > 128;
+	}
+
+	function scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
 	$effect(() => {
 		document.title = m.title();
 	});
@@ -25,6 +35,8 @@
 		theme.set(data.theme);
 	});
 </script>
+
+<svelte:window onscroll={handleScroll} />
 
 <nav class="bg-muted text-muted-fg flex h-16 justify-between text-xs sm:text-sm">
 	<div class="flex items-center justify-center pr-2 pl-4">
@@ -66,3 +78,25 @@
 </nav>
 
 {@render children()}
+
+<button
+	onclick={scrollToTop}
+	class="bg-secondary/50 text-secondary-fg hover:bg-secondary/70 fixed right-4 bottom-4 cursor-pointer rounded-full p-2 shadow-lg transition-opacity duration-300 sm:p-3"
+	class:opacity-0={!showScrollTop}
+	class:opacity-100={showScrollTop}
+	style="pointer-events: {showScrollTop ? 'auto' : 'none'}"
+	aria-label="Scroll to top"
+>
+	<svg
+		viewBox="0 0 24 24"
+		class="block h-4 w-4 sm:h-5 sm:w-5"
+		xmlns="http://www.w3.org/2000/svg"
+		stroke="currentColor"
+		fill="none"
+		stroke-width="2"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+	>
+		<polyline points="6 15 12 9 18 15" />
+	</svg>
+</button>
