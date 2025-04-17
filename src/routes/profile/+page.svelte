@@ -23,12 +23,7 @@
 	{#if currentSession}
 		<p class="mb-4">Welcome, {currentSession.user.user_metadata.name}</p>
 		<p class="mb-4">Your email: {currentSession.user.email}</p>
-		<button
-			class="bg-error hover:bg-error-alt text-bg mb-4 cursor-pointer rounded px-4 py-1 font-semibold"
-			on:click={logout}
-		>
-			Log out
-		</button>
+		<button class="error mb-8" on:click={logout}> Log out </button>
 		<h2 class="mb-2 text-2xl font-semibold">Bought Tickets</h2>
 		<ul class="list-disc pl-5">
 			{#each tickets as ticket (ticket)}
@@ -37,7 +32,7 @@
 		</ul>
 	{:else}
 		<p>
-			You are not logged in. Please <a href="/login" class="text-blue-500 underline">login</a>.
+			You are not logged in. Please <a href="/login" class="link">login</a>.
 		</p>
 	{/if}
 </main>

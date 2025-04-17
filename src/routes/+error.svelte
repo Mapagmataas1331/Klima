@@ -22,6 +22,10 @@
 	<p class="text-error-fg">error</p>
 	<p class="text-notify-fg">notify</p>
 	<p class="text-primary-fg">primary</p>
+	<p class="fill-warning">warning</p>
+	<p class="fill-error">error</p>
+	<p class="fill-notify">notify</p>
+	<p class="fill-primary">primary</p>
 </div>
 
 <div class="flex min-h-[calc(100dvh-64px)] flex-col items-center justify-center">
@@ -30,12 +34,19 @@
 			<div class={`relative h-32 w-32 text-${errorTheme}-fg`}>
 				{#if errorType.isNotFound}
 					<svg class="h-full w-full" viewBox="0 0 100 100">
-						<circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.2" />
+						<circle
+							cx="50"
+							cy="50"
+							r="45"
+							class="fill-{errorTheme}"
+							fill="currentColor"
+							opacity="0.5"
+						/>
 						<text
 							x="50%"
 							y="62%"
 							text-anchor="middle"
-							class="text-4xl font-bold text-{errorTheme}"
+							class="text-4xl font-bold text-{errorTheme}-fg"
 							fill="currentColor">{page.status}</text
 						>
 					</svg>
@@ -76,9 +87,9 @@
 				</p>
 			</div>
 
-			<div class="flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
+			<div class="flex flex-col justify-center gap-4 sm:flex-row">
 				{#if errorType.isServerError}
-					<button on:click={() => window.location.reload()} class="secondary w-full sm:w-auto">
+					<button on:click={() => window.location.reload()} class="secondary">
 						<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path
 								stroke-linecap="round"
@@ -91,7 +102,7 @@
 					</button>
 				{/if}
 
-				<a href="/" class="primary w-full sm:w-auto">
+				<a href="/" class="primary">
 					<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
 							stroke-linecap="round"
