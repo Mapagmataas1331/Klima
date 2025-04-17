@@ -27,7 +27,6 @@
 <div class="flex min-h-[calc(100dvh-64px)] flex-col items-center justify-center">
 	<div class="card mx-4 w-full max-w-2xl">
 		<div class="flex flex-col items-center space-y-8 p-6 text-center">
-			<!-- Dynamic error icon -->
 			<div class={`relative h-32 w-32 text-${errorTheme}-fg`}>
 				{#if errorType.isNotFound}
 					<svg class="h-full w-full" viewBox="0 0 100 100">
@@ -61,7 +60,6 @@
 				{/if}
 			</div>
 
-			<!-- Error content -->
 			<div class="space-y-4">
 				<h1 class={`text-4xl font-bold text-${errorTheme}-fg`}>
 					{page.status}
@@ -78,7 +76,6 @@
 				</p>
 			</div>
 
-			<!-- Action buttons -->
 			<div class="flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
 				{#if errorType.isServerError}
 					<button on:click={() => window.location.reload()} class="secondary w-full sm:w-auto">
