@@ -1,29 +1,30 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 
-const systemTheme =
-	browser && window.matchMedia
-		? window.matchMedia('(prefers-color-scheme: dark)').matches
-			? 'dark'
-			: 'light'
-		: 'light';
-
-function getThemeFromCookies(): string | null {
+function getThemeFromCookie(): string | null {
 	if (!browser) return null;
 	const match = document.cookie.match(/(?:^|; )theme=([^;]*)/);
-	return match?.[1] || null;
+	return match ? decodeURIComponent(match[1]) : null;
 }
 
 function setThemeCookie(theme: string) {
 	if (!browser) return;
-	document.cookie = `theme=${theme}; Path=/; Max-Age=31536000`;
+	document.cookie = `theme=${encodeURIComponent(theme)}; Path=/; Max-Age=${60 * 60 * 24 * 365}; SameSite=Lax`;
 }
 
-const initialTheme = getThemeFromCookies() ?? systemTheme;
+function getSystemTheme(): string {
+	if (!browser || !window.matchMedia) return 'light';
+	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+const initialTheme = browser
+	? document.documentElement.dataset.theme || getThemeFromCookie() || getSystemTheme()
+	: 'light';
+
 export const theme = writable<string>(initialTheme);
 
 theme.subscribe((value) => {
 	if (!browser) return;
-	document.body.dataset.theme = value;
+	document.documentElement.setAttribute('data-theme', value);
 	setThemeCookie(value);
 });

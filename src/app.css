@@ -146,16 +146,9 @@
 }
 
 @layer base {
-	html {
-		font-size: 16px;
-		line-height: 1.6;
-		letter-spacing: 0.5px;
-		-webkit-font-smoothing: antialiased;
-		hyphens: auto;
-	}
-
+	html,
 	body {
-		@apply bg-bg text-fg antialiased;
+		@apply bg-bg text-fg font-sans text-base leading-6 tracking-normal hyphens-auto antialiased transition duration-200 ease-in-out;
 	}
 
 	select {

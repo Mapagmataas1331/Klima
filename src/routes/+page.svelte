@@ -14,13 +14,15 @@
 </script>
 
 <main>
-	<div class="flex min-h-[calc(100dvh-64px)] flex-col items-center justify-between">
+	<section class="flex min-h-[calc(100dvh-64px)] w-full flex-col items-center justify-between">
 		<div></div>
 
 		<div class="mx-8 my-4 flex max-w-2xl flex-col items-center justify-center text-center">
-			<p class="text-base italic sm:text-lg md:text-xl">
-				<span class="font-semibold">{m.title()}</span>
-				<span> {m.generalInfo()}</span>
+			<h1 class="mb-2 text-lg font-semibold italic sm:mb-4 sm:text-xl md:mb-6 md:text-2xl">
+				{m.whatIsConference()}
+			</h1>
+			<p class="text-base sm:text-lg md:text-xl">
+				{m.conferenceIs()}
 			</p>
 		</div>
 
@@ -30,14 +32,18 @@
 			</h1>
 			<button
 				onclick={() => goto('/conference/2025')}
-				class="text-muted-fg hover:text-fg bg-muted mt-3 mb-4 flex cursor-pointer flex-col gap-2 rounded-md px-6 py-4 pb-5 text-center hyphens-none shadow-sm transition-all duration-200 ease-in-out hover:scale-105 sm:mt-6 sm:mb-8 md:px-14 md:py-10 md:pb-12"
+				class="text-muted-fg hover:text-fg bg-muted mt-3 mb-4 cursor-pointer rounded-md shadow-sm transition duration-200 ease-in-out hover:scale-105"
 			>
-				<p class="text-base font-semibold sm:text-xl md:text-2xl md:font-bold">
-					{m['conference2025.title']()}
-				</p>
-				<p class="text-base italic sm:text-lg md:text-xl md:font-semibold">
-					{m['conference2025.description']()}
-				</p>
+				<div
+					class="flex flex-col items-center justify-center gap-2 px-6 py-4 pb-5 text-center hyphens-none sm:mt-6 sm:mb-8 sm:py-6 md:px-14 md:py-8 md:pb-10"
+				>
+					<div class="text-base font-semibold sm:text-xl md:text-2xl md:font-bold">
+						{m['conference2025.title']()}
+					</div>
+					<div class="text-base italic sm:text-lg md:text-xl md:font-semibold">
+						{m['conference2025.description']()}
+					</div>
+				</div>
 			</button>
 			<div class="space-x-4">
 				{#if currentSession}
@@ -71,7 +77,47 @@
 		</div>
 
 		<div></div>
-	</div>
+	</section>
+
+	<section class="flex min-h-dvh w-full flex-col items-center justify-between">
+		<div></div>
+		<div class="my-4 w-full pr-0 pl-6 sm:w-lg sm:px-4 md:w-xl">
+			<h1 class="mb-2 text-lg font-semibold italic sm:mb-4 sm:text-xl md:mb-6 md:text-2xl">
+				Зачем участвовать?
+			</h1>
+			<ul class="list-disc px-4 text-left text-base sm:text-lg md:text-xl">
+				<li>Обмен опытом и лучшими практиками</li>
+				<li>Развитие профессиональных стандартов</li>
+				<li>Нетворкинг и новые контакты</li>
+				<li>Возможность представить свои исследования и проекты</li>
+			</ul>
+		</div>
+
+		<div class="my-4 w-full pr-0 pl-6 sm:w-lg sm:px-4 md:w-xl">
+			<h1 class="mb-2 text-lg font-semibold italic sm:mb-4 sm:text-xl md:mb-6 md:text-2xl">
+				Формат и структура
+			</h1>
+			<ul class="list-disc px-4 text-left text-base sm:text-lg md:text-xl">
+				<li>Пленарные заседания</li>
+				<li>Практические тренинги и мастер‑классы</li>
+				<li>Дискуссионные панели и круглые столы</li>
+				<li>Экскурсии и культурная программа</li>
+			</ul>
+		</div>
+
+		<div class="my-4 w-full pr-0 pl-6 sm:w-lg sm:px-4 md:w-xl">
+			<h1 class="mb-2 text-lg font-semibold italic sm:mb-4 sm:text-xl md:mb-6 md:text-2xl">
+				Кому это интересно?
+			</h1>
+			<ul class="list-disc px-4 text-left text-base sm:text-lg md:text-xl">
+				<li>Профессионалы и эксперты отрасли</li>
+				<li>Преподаватели и исследователи</li>
+				<li>Представители бизнеса и госструктур</li>
+				<li>Все, кто хочет расширить круг знакомств и получить новые знания</li>
+			</ul>
+		</div>
+		<div></div>
+	</section>
 
 	<div class="bg-bg my-2 flex flex-col items-center justify-center space-x-4 p-8">
 		<div class="text-muted-fg">text</div>
