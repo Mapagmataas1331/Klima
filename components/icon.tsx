@@ -2,15 +2,12 @@
 
 import * as React from "react";
 
-interface IconProps extends React.SVGProps<SVGSVGElement> {}
-
-export function Icon({ className, ...props }: IconProps) {
+export function Icon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1280 1280"
       className={"icon" + (className ? " " : "") + className}
-      {...props}
     >
       <g className="icon-br">
         <path d="M853.66,1229.84c-66.68,24.15-138.64,37.33-213.66,37.33-346.45,0-627.3-280.82-627.3-627.24,0-189.95,84.44-360.16,217.81-475.16v122.92c-81.45,94.56-130.69,217.66-130.69,352.24,0,298.3,241.85,540.12,540.17,540.12,47.86,0,94.27-6.23,138.46-17.91l75.2,67.7Z" />

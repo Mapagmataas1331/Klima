@@ -13,7 +13,9 @@ export default function BuyTicketPage() {
   return (
     <main className="min-h-screen p-6 md:p-12">
       <section className="max-w-2xl mx-auto space-y-8">
-        <h1 className="text-3xl md:text-5xl font-bold text-center">Покупка билета</h1>
+        <h1 className="text-3xl md:text-5xl font-bold text-center">
+          Покупка билета на конференцию {name}
+        </h1>
 
         <Card className="shadow-xl rounded-2xl">
           <CardContent className="p-6 space-y-6">

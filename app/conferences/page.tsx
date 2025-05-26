@@ -8,7 +8,7 @@ export default function ConferencesPage() {
         <h1 className="text-3xl md:text-5xl font-bold text-center">Все конференции</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {sortedConferences.map((conf, index) => (
+          {sortedConferences.map((conf) => (
             <ConferenceCard key={conf.slug} c={conf} className="animate-fade-down" />
           ))}
         </div>

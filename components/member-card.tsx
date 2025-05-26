@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { type Member } from "@/lib/data";
 
@@ -12,7 +13,7 @@ export function MemberCard({ m, className }: { m: Member; className?: string }) 
         (className ? " " + className : "")
       }
     >
-      <img
+      <Image
         src={m.image}
         alt={m.name + " image"}
         className="w-full aspect-3/4 rounded-lg object-cover group-hover:scale-105 transition-transform duration-300"

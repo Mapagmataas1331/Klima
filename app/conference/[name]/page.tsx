@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { conferences } from "@/lib/data";
 
 export default function ConferenceDetailPage() {
@@ -28,7 +29,7 @@ export default function ConferenceDetailPage() {
       <section className="max-w-4xl mx-auto space-y-10">
         <div className="space-y-2 flex flex-col">
           <h1 className="text-2xl md:text-4xl font-bold self-center">{conference.title}</h1>
-          <img
+          <Image
             src={conference.image}
             alt={conference.title + " image"}
             className="w-full max-w-2xl self-center my-4"
