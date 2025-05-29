@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { type Conference } from "@/lib/data";
+import { EnrichedConference as Conference } from "@/lib/types";
 
 export function ConferenceCard({ c, className }: { c: Conference; className?: string }) {
   return (
@@ -17,9 +17,15 @@ export function ConferenceCard({ c, className }: { c: Conference; className?: st
     >
       <CardContent className="p-6 space-y-4">
         <h2 className="text-xl font-semibold">{c.title}</h2>
-        <Image src={c.image} alt={c.title + " image"} className="w-full" />
+        <Image
+          src={c.image ? c.image : "/images/conference-placeholder.png"}
+          alt={c.title + " image"}
+          width={800}
+          height={600}
+          className="w-full h-auto rounded-xl"
+        />
         <h2 className="text-md text-muted-foreground">{c.subTitle}</h2>
-        <p className="text-sm font-medium">{c.shortDescription}</p>
+        <p className="text-sm font-medium">{c.description}</p>
         <p className="text-md text-muted-foreground mb-6">
           {c.location} ·{" "}
           {c.date

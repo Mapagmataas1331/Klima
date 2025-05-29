@@ -1,9 +1,11 @@
 import { team } from "@/lib/data";
 import { MemberCard } from "@/components/member-card";
+import { BackButton } from "@/components/back-btn";
 
 export default function TeamPage() {
   return (
     <main className="min-h-screen p-6 md:p-12">
+      <BackButton />
       <section className="max-w-5xl mx-auto space-y-8">
         <h1 className="text-3xl md:text-5xl font-bold text-center">Наша команда</h1>
 

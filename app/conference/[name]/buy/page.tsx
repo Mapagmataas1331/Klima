@@ -6,18 +6,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { BackButton } from "@/components/back-btn";
 
 export default function BuyTicketPage() {
   const { name } = useParams();
 
   return (
     <main className="min-h-screen p-6 md:p-12">
+      <BackButton />
       <section className="max-w-2xl mx-auto space-y-8">
         <h1 className="text-3xl md:text-5xl font-bold text-center">
           Покупка билета на конференцию {name}
         </h1>
 
-        <Card className="shadow-xl rounded-2xl">
+        <Card className="shadow-xl rounded-2xl animate-fade-down">
           <CardContent className="p-6 space-y-6">
             <div className="space-y-2">
               <Label className="text-lg">Тип билета</Label>
@@ -44,7 +46,9 @@ export default function BuyTicketPage() {
               </div>
             </div>
 
-            <Button className="w-full">Перейти к оплате</Button>
+            <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:brightness-110 shadow-lg">
+              Перейти к оплате
+            </Button>
           </CardContent>
         </Card>
       </section>

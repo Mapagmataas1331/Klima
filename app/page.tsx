@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/icon";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { ConferenceCard } from "@/components/conference-card";
-import { sortedConferences } from "@/lib/data";
-const lc = sortedConferences[0];
+import { upcomingConferences } from "@/lib/data";
+const lc = upcomingConferences[0];
 
 export default function Home() {
   return (
