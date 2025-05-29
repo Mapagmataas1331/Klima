@@ -6,17 +6,47 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { conferences } from "@/lib/data";
 import { BackButton } from "@/components/back-btn";
 
 export default function BuyTicketPage() {
   const { name } = useParams();
 
+  if (!name) {
+    return null;
+  } else if (!conferences[name.toString()]) {
+    return (
+      <main className="min-h-screen p-6 md:p-12">
+        <BackButton />
+        <section className="max-w-2xl mx-auto space-y-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-center">
+            Конференция <p className="text-muted-foreground">{name.toString()}</p> не найдена
+          </h1>
+        </section>
+      </main>
+    );
+  }
+  const conference = conferences[name.toString()];
+
+  if (conference.dateValue.getTime() < new Date().getTime()) {
+    return (
+      <main className="min-h-screen p-6 md:p-12">
+        <BackButton />
+        <section className="max-w-2xl mx-auto space-y-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-center">
+            Конференция <p className="text-muted-foreground">{conference.title}</p> завершена
+          </h1>
+        </section>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen p-6 md:p-12">
       <BackButton />
       <section className="max-w-2xl mx-auto space-y-8">
-        <h1 className="text-3xl md:text-5xl font-bold text-center">
-          Покупка билета на конференцию {name}
+        <h1 className="text-3xl md:text-5xl font-bold text-center indent-8 md:indent-0">
+          Покупка билета на конференцию {conference.title}
         </h1>
 
         <Card className="shadow-xl rounded-2xl animate-fade-down">

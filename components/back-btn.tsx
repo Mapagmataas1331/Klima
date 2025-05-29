@@ -12,7 +12,7 @@ export function BackButton() {
       onClick={() => router.back()}
       variant="ghost"
       size="icon"
-      className="absolute top-4 left-4 z-50 rounded-full shadow-md hover:bg-muted hover:scale-105 transition"
+      className="absolute top-4 left-4 z-50 rounded-full shadow-md hover:bg-muted transition"
     >
       <ArrowLeft className="w-5 h-5" />
       <span className="sr-only">Назад</span>

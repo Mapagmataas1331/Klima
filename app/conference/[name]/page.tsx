@@ -24,7 +24,7 @@ export default function ConferenceDetailPage() {
       <main className="min-h-screen p-6 md:p-12">
         <BackButton />
         <section className="max-w-2xl mx-auto space-y-8">
-          <h1 className="text-3xl md:text-5xl font-bold text-center">
+          <h1 className="text-2xl md:text-4xl font-bold text-center">
             Конференция <p className="text-muted-foreground">{name.toString()}</p> не найдена
           </h1>
         </section>
@@ -36,9 +36,11 @@ export default function ConferenceDetailPage() {
   return (
     <main className="min-h-screen p-6 md:p-12">
       <BackButton />
-      <section className="max-w-4xl mx-auto space-y-10">
+      <section className="max-w-4xl mx-auto space-y-6 md:space-y-10">
         <div className="space-y-2 flex flex-col">
-          <h1 className="text-2xl md:text-4xl font-bold self-center">{conference.title}</h1>
+          <h1 className="text-2xl md:text-4xl font-bold self-center indent-8 md:indent-0">
+            {conference.title}
+          </h1>
           <Image
             src={conference.image ? conference.image : "/images/conference-placeholder.png"}
             alt={conference.title + " image"}
@@ -61,11 +63,15 @@ export default function ConferenceDetailPage() {
         </div>
 
         <div className="flex justify-center">
-          <Link href={`/conference/${name}/buy`}>
-            <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:brightness-110 shadow-lg px-8">
-              Купить билет
-            </Button>
-          </Link>
+          {conference.dateValue.getTime() < new Date().getTime() ? (
+            <p className="font-bold text-lg sm:text-xl text-center">Конференция завершена!</p>
+          ) : (
+            <Link href={`/conference/${name}/buy`}>
+              <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:brightness-110 shadow-lg px-8">
+                Купить билет
+              </Button>
+            </Link>
+          )}
         </div>
 
         {conference.content?.map((block, index) => {
@@ -109,12 +115,12 @@ export default function ConferenceDetailPage() {
                 if (!member) return null;
                 return (
                   <div key={index}>
-                    <MemberCard m={member} />
                     {item.roleHere && (
-                      <p className="text-sm text-center text-muted-foreground mt-1">
+                      <p className="text-sm sm:text-base text-center text-muted-foreground my-2 font-semibold">
                         {item.roleHere}
                       </p>
                     )}
+                    <MemberCard m={member} />
                   </div>
                 );
               })}

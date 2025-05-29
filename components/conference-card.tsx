@@ -15,18 +15,26 @@ export function ConferenceCard({ c, className }: { c: Conference; className?: st
         (className ? " " + className : "")
       }
     >
-      <CardContent className="p-6 space-y-4">
-        <h2 className="text-xl font-semibold">{c.title}</h2>
-        <Image
-          src={c.image ? c.image : "/images/conference-placeholder.png"}
-          alt={c.title + " image"}
-          width={800}
-          height={600}
-          className="w-full h-auto rounded-xl"
-        />
-        <h2 className="text-md text-muted-foreground">{c.subTitle}</h2>
-        <p className="text-sm font-medium">{c.description}</p>
-        <p className="text-md text-muted-foreground mb-6">
+      <CardContent className="p-2 sm:p-6 space-y-4">
+        <h2 className="text-lg sm:text-xl font-semibold">{c.title}</h2>
+        <div className="relative w-full pb-[75%] rounded-xl">
+          <Image
+            src={c.image || "/images/conference-placeholder.png"}
+            alt={`${c.title} image`}
+            fill
+            className="object-cover rounded-xl"
+          />
+          {c.dateValue.getTime() < new Date().getTime() && (
+            <div className="absolute inset-0 flex items-end justify-end p-1.5">
+              <p className="text-white/80 font-bold text-base sm:text-xl text-center drop-shadow-lg bg-black/50 rounded-xl px-4 py-1 sm:px-6 sm:py-2">
+                Завершена
+              </p>
+            </div>
+          )}
+        </div>
+        <h2 className="text-sm md:text-md text-muted-foreground">{c.subTitle}</h2>
+        <p className="text-xs md:text-sm font-medium">{c.description}</p>
+        <p className="text-sm md:text-md text-muted-foreground mb-6">
           {c.location} ·{" "}
           {c.date
             ? c.dateValue.getDate() + " " + c.monthNameGenitive

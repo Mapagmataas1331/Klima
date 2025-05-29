@@ -8,18 +8,20 @@ const lc = upcomingConferences[0];
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-6 md:p-12">
-      <section className="max-w-4xl mx-auto space-y-12">
-        <section className="bg-muted p-6 rounded-xl space-y-4 flex flex-col items-center justify-center text-center pb-24">
-          <ThemeSwitcher className="self-end hover:scale-105 transition-transform duration-300" />
-          <h1 className="text-3xl md:text-5xl font-bold">Конференции по Этикету</h1>
+    <main className="min-h-screen px-6 pt-6 pb-0 md:p-12">
+      <section className="max-w-4xl mx-auto space-y-4 md:space-y-12">
+        <section className="bg-muted pt-6 px-6 pb-8 rounded-xl space-y-4 flex flex-col items-center justify-center text-center md:pb-20 md:pt-16">
+          <ThemeSwitcher className="absolute z-50 top-4 right-4 md:top-8 md:right-8 transition-transform duration-300 shadow-md !bg-muted hover:brightness-110" />
+          <h1 className="text-2xl md:text-4xl font-bold">Конференции по Этикету</h1>
           <Icon className="max-w-3xs md:max-w-xs m-6 fill-current text-foreground/75 animate-fade-down hover:scale-[102.5%] hover:text-foreground/80 transition-transform duration-300 [&>.icon-k]:animate-float-reverse [&>.icon-k]:delay-1000 [&>.icon-e]:animate-float [&>.icon-e]:delay-1000" />
-          <p className="text-lg md:text-2xl mt-0.5">
+          <p className="text-lg md:text-2xl mt-2.5">
             Современный взгляд на классический этикет
           </p>
         </section>
-        <section className="bg-muted p-6 rounded-xl space-y-4 flex flex-col">
-          <h2 className="text-xl font-semibold">Ближайшая конференция</h2>
+        <section className="bg-muted py-6 px-1 sm:px-6 rounded-xl space-y-4 flex flex-col">
+          <h2 className="self-center text-lg sm:place-self-start sm:text-xl font-semibold">
+            Ближайшая конференция
+          </h2>
           <ConferenceCard c={lc} className="animate-fade-down" />
         </section>
 
@@ -76,7 +78,7 @@ export default function Home() {
               <li>Экскурсии и культурная программа</li>
             </ul>
           </section>
-          <section className="bg-muted p-6 rounded-xl space-y-4">
+          <section className="bg-muted p-6 rounded-xl space-y-4 mb-8">
             <h2 className="text-xl font-semibold">Кому это интересно?</h2>
             <ul className="my-4 ml-6 list-disc [&>li]:mt-2">
               <li>Профессионалы и эксперты отрасли</li>
