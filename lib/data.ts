@@ -202,7 +202,14 @@ export const team: Team = {
       "Организатор Конкурса Красоты «Мисс/Миссис Финанс»",
     ],
     contacts: ["Телефон: +7 (913) 729 74 42"],
-    image: "/team/tatiana.png",
+    image: "/team/tatiana.jpg",
+  },
+  maria: {
+    name: "Мария Климачкова",
+    role: "Програмист",
+    aboutList: ["Создатель сайта"],
+    contacts: [],
+    image: "/team/maria.jpg",
   },
   "test-member": {
     name: "TEST User",
