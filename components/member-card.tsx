@@ -3,9 +3,9 @@
 import * as React from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Member } from "@/lib/types";
+import { TeamMember } from "@/lib/types";
 
-export function MemberCard({ m, className }: { m: Member; className?: string }) {
+export function MemberCard({ m, className }: { m: TeamMember; className?: string }) {
   return (
     <Card
       className={
@@ -24,9 +24,9 @@ export function MemberCard({ m, className }: { m: Member; className?: string }) 
         <p className="text-lg font-medium">{m.name}</p>
         <p className="text-sm">{m.role}</p>
         <div className="space-y-1">
-          {m.aboutList && (
+          {m.about_list && (
             <ul className="list-disc list-inside space-y-1 py-2">
-              {m.aboutList.map((about, index) => (
+              {m.about_list.map((about, index) => (
                 <li key={index} className="text-sm text-muted-foreground">
                   {about}
                 </li>

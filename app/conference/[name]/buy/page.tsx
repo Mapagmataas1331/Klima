@@ -6,27 +6,60 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { conferences } from "@/lib/data";
+import { fetchConferenceBySlug } from "@/lib/supabase/data";
 import { BackButton } from "@/components/back-btn";
+import { useEffect, useState } from "react";
+import { EnrichedConference } from "@/lib/types";
 
 export default function BuyTicketPage() {
   const { name } = useParams();
+  const [conference, setConference] = useState<EnrichedConference | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
-  if (!name) {
-    return null;
-  } else if (!conferences[name.toString()]) {
+  useEffect(() => {
+    if (!name) return;
+
+    const loadConference = async () => {
+      setLoading(true);
+      try {
+        const conf = await fetchConferenceBySlug(name.toString());
+        if (!conf) {
+          setNotFound(true);
+          return;
+        }
+        setConference(conf);
+      } catch (err) {
+        console.error(err);
+        setNotFound(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadConference();
+  }, [name]);
+
+  if (loading) {
+    return (
+      <main className="min-h-screen p-6 md:p-12 flex items-center justify-center">
+        <p className="text-muted-foreground">Загрузка...</p>
+      </main>
+    );
+  }
+
+  if (notFound || !conference) {
     return (
       <main className="min-h-screen p-6 md:p-12">
         <BackButton />
         <section className="max-w-2xl mx-auto space-y-8">
           <h1 className="text-2xl md:text-4xl font-bold text-center">
-            Конференция <p className="text-muted-foreground">{name.toString()}</p> не найдена
+            Конференция <p className="text-muted-foreground">{name?.toString()}</p> не найдена
           </h1>
         </section>
       </main>
     );
   }
-  const conference = conferences[name.toString()];
 
   if (conference.dateValue.getTime() < new Date().getTime()) {
     return (

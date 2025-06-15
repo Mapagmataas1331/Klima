@@ -1,3 +1,4 @@
+// ---------- Content Block ----------
 export interface TextBlock {
   type: "text";
   text: string;
@@ -18,44 +19,62 @@ export interface ListBlock {
 
 export type Block = TextBlock | WithImgBlock | ListBlock;
 
-export interface Conference {
+// ---------- Conference ----------
+// Raw from Supabase
+export interface ConferenceBase {
+  id: string;
+  slug: string;
   title: string;
-  subTitle: string;
-  date: string | undefined;
-  month: string;
-  year: string;
-  timeStart: string | undefined;
+  sub_title?: string;
+  day?: string;
+  month?: string;
+  year?: string;
+  time?: string;
+  duration?: string;
   location: string;
-  address: string | undefined;
-  description: string | undefined;
-  content: Block[] | undefined;
-  team: { member: string; roleHere: string }[] | undefined;
-  image: string | undefined;
+  address?: string;
+  description?: string;
+  image?: string;
 }
 
-export interface EnrichedConference extends Conference {
-  slug: string;
+// Enriched with derived fields
+export interface EnrichedConference extends ConferenceBase {
+  content: Block[];
   dateValue: Date;
+  isPast: boolean;
   monthName: string;
   monthNameGenitive: string;
 }
 
-export interface Member {
+// ---------- Team Member ----------
+export interface TeamMember {
+  id: string;
+  slug: string;
   name: string;
-  role: string | undefined;
-  aboutList: string[] | undefined;
-  contacts: string[] | undefined;
-  image: string | undefined;
+  role?: string;
+  about_list?: string[];
+  contacts?: string[];
+  image?: string;
 }
 
-export interface Conferences {
-  [key: string]: Conference;
+export interface ConferenceMember {
+  team_member: TeamMember;
+  role_in_conference?: string;
 }
 
-export interface EnrichedConferences {
-  [key: string]: EnrichedConference;
+// Conference-Team Many-to-Many
+export interface ConferenceTeamMember {
+  conference_id: string;
+  team_member_id: string;
+  role_in_conference?: string;
 }
 
-export interface Team {
-  [key: string]: Member;
+// ---------- Output Structures ----------
+export type ConferenceList = EnrichedConference[];
+export type TeamList = TeamMember[];
+
+export interface FetchedConferencesResult {
+  conferences: EnrichedConference[];
+  upcomingConference: EnrichedConference[];
+  closestConference: EnrichedConference | null;
 }
